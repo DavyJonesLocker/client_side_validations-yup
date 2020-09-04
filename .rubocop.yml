@@ -1,0 +1,52 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+
+AllCops:
+  TargetRailsVersion: 5.0
+  TargetRubyVersion: 2.4
+  NewCops: enable
+  Exclude:
+    - 'gemfiles/vendor/bundle/**/*'
+    - 'node_modules/**/*'
+    - 'vendor/bundle/**/*'
+
+Layout/HashAlignment:
+  EnforcedColonStyle: table
+  EnforcedHashRocketStyle: table
+
+Layout/LineLength:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 23.02
+
+Metrics/BlockLength:
+  Exclude:
+    - '*.gemspec'
+    - 'Rakefile'
+    - 'test/**/*'
+
+Metrics/ClassLength:
+  Exclude:
+    - 'test/**/*'
+
+Metrics/CyclomaticComplexity:
+  Max: 7 # TODO: Lower to 6
+
+Metrics/MethodLength:
+  Exclude:
+    - 'test/**/*'
+
+Metrics/ModuleLength:
+  Exclude:
+    - 'test/**/*'
+
+Rails/RakeEnvironment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Enabled: false
